@@ -1,0 +1,8 @@
+# helm repo add bitnami https://charts.bitnami.com/bitnami
+# helm install metallb bitnami/metallb -n metallb-system -f ./metallb.yaml
+configInline:
+  address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - 128.0.2.200-128.0.2.255
